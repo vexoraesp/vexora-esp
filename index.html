@@ -10,21 +10,17 @@ font-family:Arial,sans-serif;
 text-align:center;
 margin:0;
 }
-
 header{
 padding:30px;
 background:#111;
 }
-
 .logo{
 width:220px;
 border-radius:20px;
 }
-
 h1{
 color:#ff2d2d;
 }
-
 .players{
 display:flex;
 flex-wrap:wrap;
@@ -32,73 +28,70 @@ justify-content:center;
 gap:20px;
 padding:30px;
 }
-
 .card{
 background:#181818;
 padding:20px;
 border-radius:15px;
 width:300px;
 }
-
 .card img{
 width:100%;
 border-radius:10px;
 }
-
 .role{
 color:#ff4444;
 font-weight:bold;
 }
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#ff2d2d;
+color:white;
+text-decoration:none;
+border-radius:10px;
+margin-top:10px;
+}
+.btn:hover{
+background:#ff5555;
+}
+.section{
+padding:40px;
+background:#111;
+}
 </style>
 </head>
-
 <body>
-
 <header>
 <img src="IMG_8211.png" class="logo">
 <h1>VEXORA-ESP</h1>
 <p>Official Free Fire Esports Team</p>
 </header>
-
 <section class="players">
-
 <div class="card">
 <img src="079DCA09-D586-45E7-BD31-568B77748995.jpeg">
 <h2>VEX-SH4YEK</h2>
 <p>Founder & Sponsor of VEXORA-ESP</p>
 <p class="role">Supporter</p>
 </div>
-
 <div class="card">
 <img src="20c00eda-083c-4e84-b98c-7f5e214a5a08.jpeg">
 <h2>VEX-MAHFUZ</h2>
 <p>Team Management Manager</p>
 <p class="role">Rusher</p>
 </div>
-
 <div class="card">
 <img src="IMG_8245.jpeg">
 <h2>VEX-SIFAT</h2>
 <p>Manager of VEXORA-ESP</p>
 <p class="role">Rusher</p>
 </div>
-
 </section>
-
-<section style="padding:40px;background:#111;">
+<section class="section">
 <h2 style="color:#ff2d2d;">Join VEXORA-ESP</h2>
-
 <p>Want to join our esports team?</p>
-
-<p>
-Contact Founder:
-<br>
-VEX-SH4YEK
-</p>
-
 <p>
 Requirements:
-<br>
+<br><br>
 ✔ Active Player
 <br>
 ✔ Good Teamwork
@@ -107,48 +100,27 @@ Requirements:
 <br>
 ✔ Free Fire Experience
 </p>
-
-<a href="https://instagram.com/YOUR_INSTAGRAM"
-style="
-display:inline-block;
-padding:12px 25px;
-background:#ff2d2d;
-color:white;
-text-decoration:none;
-border-radius:10px;">
-Apply Now
+<p>
+Click the button below and send us a DM on Instagram with:
+<br><br>
+• Name
+<br>
+• Free Fire UID
+<br>
+• Level
+<br>
+• Role
+<br>
+• Country
+</p>
+<a href="https://www.instagram.com/vexora.esp/"
+target="_blank"
+class="btn">
+Apply via Instagram
 </a>
-
-</section><section style="padding:40px;background:#111;margin-top:30px;">
-<h2 style="color:#ff2d2d;">Join VEXORA-ESP</h2>
-
-<form style="max-width:500px;margin:auto;display:flex;flex-direction:column;gap:10px;">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="text" placeholder="Free Fire UID" required>
-
-<input type="number" placeholder="Level" required>
-
-<input type="text" placeholder="Game Role (Rusher, Sniper, Supporter, IGL)" required>
-
-<input type="text" placeholder="Country" required>
-
-<input type="text" placeholder="Instagram / WhatsApp / Discord" required>
-
-<textarea placeholder="Tell us about yourself" rows="5"></textarea>
-
-<button type="submit" style="
-padding:12px;
-background:#ff2d2d;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;">
-Submit Application
-</button>
-
-</form>
-</section></body>
+</section>
+<footer style="padding:20px;background:#000;">
+<p>© 2025 VEXORA-ESP. All Rights Reserved.</p>
+</footer>
+</body>
 </html>
