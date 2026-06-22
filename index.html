@@ -12,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -30,14 +30,9 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85));
 position:relative;
 overflow:hidden;
-background:
-linear-gradient(rgba(0,0,0,.7),
-rgba(0,0,0,.85)),
-url("IMG_8211.png");
-background-size:cover;
-background-position:center;
 }
 
 .hero::before{
@@ -47,7 +42,7 @@ width:500px;
 height:500px;
 background:red;
 filter:blur(180px);
-opacity:.2;
+opacity:.25;
 animation:pulse 4s infinite;
 }
 
@@ -62,16 +57,32 @@ position:relative;
 z-index:2;
 }
 
-.hero img{
+.main-logo{
 width:220px;
-margin-bottom:20px;
-filter:drop-shadow(0 0 20px red);
+filter:drop-shadow(0 0 30px red);
+animation:liveLogo 2.5s infinite;
+}
+
+@keyframes liveLogo{
+0%{transform:scale(1);}
+50%{
+transform:scale(1.08);
+filter:drop-shadow(0 0 50px red);
+}
+100%{transform:scale(1);}
+}
+
+.ff-logo{
+width:180px;
+margin-top:15px;
+filter:drop-shadow(0 0 15px orange);
 }
 
 .hero h1{
 font-size:4rem;
 color:#ff2d2d;
 text-shadow:0 0 20px red;
+margin-top:20px;
 }
 
 .hero p{
@@ -89,16 +100,8 @@ color:white;
 text-decoration:none;
 border-radius:10px;
 font-weight:bold;
-font-size:18px;
 box-shadow:0 0 20px red;
-transition:.3s;
 }
-
-.hero-btn:hover{
-transform:translateY(-5px);
-}
-
-/* SECTION */
 
 section{
 padding:80px 20px;
@@ -107,11 +110,9 @@ padding:80px 20px;
 .section-title{
 text-align:center;
 font-size:40px;
-margin-bottom:50px;
+margin-bottom:40px;
 color:#ff2d2d;
 }
-
-/* ABOUT */
 
 .about{
 max-width:900px;
@@ -121,94 +122,57 @@ line-height:1.8;
 color:#ddd;
 }
 
-/* PLAYERS */
-
-.players{
+.social{
 display:flex;
 justify-content:center;
+gap:20px;
 flex-wrap:wrap;
-gap:30px;
 }
 
-.card{
-width:320px;
+.social a{
 background:#111;
-border:1px solid #222;
-border-radius:20px;
-overflow:hidden;
-transition:.4s;
-box-shadow:0 0 20px rgba(255,0,0,.15);
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px rgba(255,0,0,.4);
-}
-
-.card img{
-width:100%;
-height:350px;
-object-fit:cover;
-}
-
-.card-content{
-padding:20px;
-}
-
-.card h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.position{
-color:#ff2d2d;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.role{
-background:#ff2d2d;
-display:inline-block;
-padding:8px 15px;
-border-radius:50px;
-font-size:14px;
-}
-
-/* JOIN */
-
-.join{
-text-align:center;
-background:#0d0d0d;
-}
-
-.join ul{
-list-style:none;
-margin:30px 0;
-}
-
-.join li{
-font-size:20px;
-margin:12px 0;
-}
-
-.apply-btn{
-display:inline-block;
-padding:16px 45px;
-background:#ff2d2d;
+padding:15px 30px;
+border:1px solid #ff2d2d;
+border-radius:12px;
 color:white;
 text-decoration:none;
-border-radius:12px;
-font-size:20px;
 font-weight:bold;
-box-shadow:0 0 20px red;
 transition:.3s;
 }
 
-.apply-btn:hover{
-transform:scale(1.05);
+.social a:hover{
+background:#ff2d2d;
 }
 
-/* FOOTER */
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input,
+form textarea{
+padding:15px;
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+color:white;
+font-size:16px;
+}
+
+form button{
+padding:15px;
+background:#ff2d2d;
+border:none;
+border-radius:10px;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 20px red;
+}
 
 footer{
 background:black;
@@ -217,174 +181,118 @@ text-align:center;
 color:#999;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
 .hero h1{
 font-size:2.5rem;
 }
 
-.hero img{
-width:160px;
+.main-logo{
+width:170px;
 }
 
-.card{
-width:90%;
+.ff-logo{
+width:130px;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-
-<div class="hero">
+<section class="hero">
 
 <div class="hero-content">
 
-<img src="IMG_8211.png">
+<img src="878837FD-642F-4352-99EA-28E01C4A11B7.png" class="main-logo">
 
-<h1>VEXORA-ESP</h1>
+<h1>VEXORA ESPORTS</h1>
 
-<p>Elite Free Fire Esports Organization</p>
+<p>Free Fire Esports Organization</p>
 
-<a href="#team" class="hero-btn">
-MEET THE TEAM
+<img src="IMG_8440.jpeg" class="ff-logo">
+
+<br>
+
+<a href="#apply" class="hero-btn">
+JOIN OUR TEAM
 </a>
 
 </div>
 
-</div>
-
-<!-- ABOUT -->
+</section>
 
 <section>
 
-<h2 class="section-title">
-ABOUT US
-</h2>
+<h2 class="section-title">ABOUT US</h2>
 
 <div class="about">
 
 <p>
-
 VEXORA-ESP is a competitive Free Fire esports organization dedicated to developing talented players, dominating tournaments, and building a strong gaming community.
-
-We focus on teamwork, discipline, and competitive excellence.
-
+<br><br>
+We focus on teamwork, discipline, respect, and competitive excellence.
 </p>
 
 </div>
 
 </section>
 
-<!-- TEAM -->
+<section>
 
-<section id="team">
+<h2 class="section-title">CONNECT WITH US</h2>
 
-<h2 class="section-title">
-OUR TEAM
-</h2>
+<div class="social">
 
-<div class="players">
-
-<div class="card">
-
-<img src="97F4D54A-4FDA-4878-B106-702878329AD9.png">
-
-<div class="card-content">
-
-<h3>VEX-SH4YEK</h3>
-
-<p class="position">
-Founder & Sponsor
-</p>
-
-<span class="role">
-SUPPORTER
-</span>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="F3B9C39B-533D-46E0-9467-EF69D75F5E9B.png">
-
-<div class="card-content">
-
-<h3>VEX-MAHFUZ</h3>
-
-<p class="position">
-Team Management Manager
-</p>
-
-<span class="role">
-RUSHER
-</span>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="EF041D5F-347A-4FF1-AD55-9C8B82B935A0.png">
-
-<div class="card-content">
-
-<h3>VEX-SIFAT</h3>
-
-<p class="position">
-Manager
-</p>
-
-<span class="role">
-RUSHER
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- JOIN -->
-
-<section class="join">
-
-<h2 class="section-title">
-JOIN VEXORA-ESP
-</h2>
-
-<p>Think you have what it takes?</p>
-
-<ul>
-<li>✔ Active Player</li>
-<li>✔ Good Teamwork</li>
-<li>✔ Respect Teammates</li>
-<li>✔ Free Fire Experience</li>
-<li>✔ Competitive Mindset</li>
-</ul>
-
-<a
-href="https://www.instagram.com/vexora.esp/"
-target="_blank"
-class="apply-btn">
-APPLY NOW
+<a href="https://wa.me/message/3EIVAAZXLPTVK1" target="_blank">
+WhatsApp
 </a>
+
+<a href="https://www.instagram.com/vexora.esp?igsh=ZG5xems2NnUzajFx&utm_source=qr" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/share/1BGpfdGSV6/?mibextid=wwXIfr" target="_blank">
+Facebook
+</a>
+
+</div>
+
+</section>
+
+<section id="apply">
+
+<h2 class="section-title">APPLY FOR VEXORA-ESP</h2>
+
+<form action="https://formsubmit.co/vexora.esp@gmail.com" method="POST">
+
+<input type="text" name="Name" placeholder="NAME" required>
+
+<input type="number" name="Age" placeholder="AGE" required>
+
+<input type="text" name="IGN" placeholder="IN GAME NAME" required>
+
+<input type="text" name="UID" placeholder="GAME UID" required>
+
+<textarea name="About" rows="6" placeholder="ABOUT YOU..." required></textarea>
+
+<button type="submit">
+SUBMIT APPLICATION
+</button>
+
+</form>
 
 </section>
 
 <footer>
 
-© 2025 VEXORA-ESP • Official Esports Team
+<p>📧 vexora.esp@gmail.com</p>
+
+<br>
+
+© 2025 VEXORA-ESP • Official Free Fire Esports Team
 
 </footer>
 
