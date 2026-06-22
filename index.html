@@ -8,6 +8,10 @@
 
 <link rel="icon" type="image/png" href="23981E6B-7979-4000-BD4D-14492410C26D.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -34,7 +38,10 @@ align-items:center;
 text-align:center;
 position:relative;
 overflow:hidden;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.90));
+background:
+radial-gradient(circle at center,
+rgba(120,0,0,.55),
+#050505 75%);
 }
 
 .hero::before{
@@ -44,13 +51,13 @@ width:500px;
 height:500px;
 background:red;
 filter:blur(180px);
-opacity:.25;
+opacity:.15;
 animation:pulse 4s infinite;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.2);}
+50%{transform:scale(1.15);}
 100%{transform:scale(1);}
 }
 
@@ -60,55 +67,67 @@ z-index:2;
 }
 
 .main-logo{
-width:240px;
-filter:drop-shadow(0 0 35px red);
+width:230px;
+filter:drop-shadow(0 0 25px red);
 animation:logoPulse 3s infinite;
 }
 
 @keyframes logoPulse{
 0%{transform:scale(1);}
 50%{
-transform:scale(1.08);
-filter:drop-shadow(0 0 50px red);
+transform:scale(1.05);
+filter:drop-shadow(0 0 40px red);
 }
 100%{transform:scale(1);}
 }
 
 .hero h1{
-font-size:4rem;
+font-family:'Orbitron',sans-serif;
+font-size:4.5rem;
+font-weight:900;
+letter-spacing:6px;
+text-transform:uppercase;
 color:#ff2d2d;
-text-shadow:0 0 20px red;
 margin-top:20px;
+text-shadow:
+0 0 10px #ff2d2d,
+0 0 25px #ff2d2d,
+0 0 45px rgba(255,0,0,.7);
 }
 
 .hero p{
-margin-top:10px;
+margin-top:15px;
 font-size:1.2rem;
 color:#ddd;
 }
 
 .ff-logo{
-width:180px;
-margin-top:20px;
-filter:drop-shadow(0 0 15px orange);
+width:120px;
+margin-top:25px;
+opacity:.65;
+filter:none;
 }
 
 .hero-btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 40px;
+margin-top:35px;
+padding:18px 55px;
 background:#ff2d2d;
 color:white;
 text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-box-shadow:0 0 20px red;
+border-radius:14px;
+font-weight:700;
+font-size:18px;
+letter-spacing:1px;
+box-shadow:0 0 25px rgba(255,0,0,.5);
 transition:.3s;
 }
 
 .hero-btn:hover{
 transform:translateY(-5px);
 }
+
+/* SECTION */
 
 section{
 padding:80px 20px;
@@ -119,7 +138,10 @@ text-align:center;
 font-size:40px;
 margin-bottom:40px;
 color:#ff2d2d;
+font-family:'Orbitron',sans-serif;
 }
+
+/* ABOUT */
 
 .about{
 max-width:900px;
@@ -151,6 +173,7 @@ transition:.3s;
 
 .social a:hover{
 background:#ff2d2d;
+transform:translateY(-3px);
 }
 
 /* FORM */
@@ -190,6 +213,11 @@ font-size:18px;
 font-weight:bold;
 cursor:pointer;
 box-shadow:0 0 20px red;
+transition:.3s;
+}
+
+form button:hover{
+transform:translateY(-3px);
 }
 
 /* FOOTER */
@@ -206,15 +234,16 @@ color:#999;
 @media(max-width:768px){
 
 .hero h1{
-font-size:2.5rem;
+font-size:3rem;
+letter-spacing:3px;
 }
 
 .main-logo{
-width:170px;
+width:180px;
 }
 
 .ff-logo{
-width:120px;
+width:90px;
 }
 
 .section-title{
@@ -264,7 +293,9 @@ ABOUT US
 
 <p>
 VEXORA-ESP is a competitive Free Fire esports organization dedicated to developing talented players, dominating tournaments, and building a strong gaming community.
+
 <br><br>
+
 We focus on teamwork, discipline, respect, and competitive excellence.
 </p>
 
@@ -297,6 +328,7 @@ FACEBOOK
 </div>
 
 </section>
+
 <!-- APPLICATION -->
 
 <section id="apply">
@@ -332,7 +364,6 @@ SUBMIT APPLICATION
 </form>
 
 </section>
-
 
 <!-- FOOTER -->
 
