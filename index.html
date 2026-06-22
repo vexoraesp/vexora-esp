@@ -6,6 +6,8 @@
 
 <title>VEXORA-ESP | Official Esports Team</title>
 
+<link rel="icon" type="image/png" href="23981E6B-7979-4000-BD4D-14492410C26D.png">
+
 <style>
 
 *{
@@ -30,9 +32,9 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85));
 position:relative;
 overflow:hidden;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.90));
 }
 
 .hero::before{
@@ -58,24 +60,18 @@ z-index:2;
 }
 
 .main-logo{
-width:220px;
-filter:drop-shadow(0 0 30px red);
-animation:liveLogo 2.5s infinite;
+width:240px;
+filter:drop-shadow(0 0 35px red);
+animation:logoPulse 3s infinite;
 }
 
-@keyframes liveLogo{
+@keyframes logoPulse{
 0%{transform:scale(1);}
 50%{
 transform:scale(1.08);
 filter:drop-shadow(0 0 50px red);
 }
 100%{transform:scale(1);}
-}
-
-.ff-logo{
-width:180px;
-margin-top:15px;
-filter:drop-shadow(0 0 15px orange);
 }
 
 .hero h1{
@@ -86,9 +82,15 @@ margin-top:20px;
 }
 
 .hero p{
+margin-top:10px;
 font-size:1.2rem;
 color:#ddd;
-margin-top:10px;
+}
+
+.ff-logo{
+width:180px;
+margin-top:20px;
+filter:drop-shadow(0 0 15px orange);
 }
 
 .hero-btn{
@@ -98,9 +100,14 @@ padding:15px 40px;
 background:#ff2d2d;
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:bold;
 box-shadow:0 0 20px red;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
 }
 
 section{
@@ -122,6 +129,8 @@ line-height:1.8;
 color:#ddd;
 }
 
+/* SOCIAL */
+
 .social{
 display:flex;
 justify-content:center;
@@ -134,8 +143,8 @@ background:#111;
 padding:15px 30px;
 border:1px solid #ff2d2d;
 border-radius:12px;
-color:white;
 text-decoration:none;
+color:white;
 font-weight:bold;
 transition:.3s;
 }
@@ -143,6 +152,8 @@ transition:.3s;
 .social a:hover{
 background:#ff2d2d;
 }
+
+/* FORM */
 
 form{
 max-width:700px;
@@ -162,6 +173,13 @@ color:white;
 font-size:16px;
 }
 
+form input:focus,
+form textarea:focus{
+outline:none;
+border-color:#ff2d2d;
+box-shadow:0 0 15px red;
+}
+
 form button{
 padding:15px;
 background:#ff2d2d;
@@ -174,12 +192,16 @@ cursor:pointer;
 box-shadow:0 0 20px red;
 }
 
+/* FOOTER */
+
 footer{
 background:black;
-padding:25px;
+padding:30px;
 text-align:center;
 color:#999;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -192,7 +214,11 @@ width:170px;
 }
 
 .ff-logo{
-width:130px;
+width:120px;
+}
+
+.section-title{
+font-size:30px;
 }
 
 }
@@ -202,17 +228,19 @@ width:130px;
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
 
-<img src="878837FD-642F-4352-99EA-28E01C4A11B7.png" class="main-logo">
+<img src="23981E6B-7979-4000-BD4D-14492410C26D.png" class="main-logo">
 
-<h1>VEXORA ESPORTS</h1>
+<h1>VEXORA-ESP</h1>
 
-<p>Free Fire Esports Organization</p>
+<p>Elite Free Fire Esports Organization</p>
 
-<img src="IMG_8440.jpeg" class="ff-logo">
+<img src="674F527B-523C-46C4-9873-4A07BAA5D163.png" class="ff-logo">
 
 <br>
 
@@ -224,9 +252,13 @@ JOIN OUR TEAM
 
 </section>
 
+<!-- ABOUT -->
+
 <section>
 
-<h2 class="section-title">ABOUT US</h2>
+<h2 class="section-title">
+ABOUT US
+</h2>
 
 <div class="about">
 
@@ -240,43 +272,53 @@ We focus on teamwork, discipline, respect, and competitive excellence.
 
 </section>
 
+<!-- SOCIAL -->
+
 <section>
 
-<h2 class="section-title">CONNECT WITH US</h2>
+<h2 class="section-title">
+CONNECT WITH US
+</h2>
 
 <div class="social">
 
 <a href="https://wa.me/message/3EIVAAZXLPTVK1" target="_blank">
-WhatsApp
+WHATSAPP
 </a>
 
 <a href="https://www.instagram.com/vexora.esp?igsh=ZG5xems2NnUzajFx&utm_source=qr" target="_blank">
-Instagram
+INSTAGRAM
 </a>
 
 <a href="https://www.facebook.com/share/1BGpfdGSV6/?mibextid=wwXIfr" target="_blank">
-Facebook
+FACEBOOK
 </a>
 
 </div>
 
 </section>
 
+<!-- APPLICATION -->
+
 <section id="apply">
 
-<h2 class="section-title">APPLY FOR VEXORA-ESP</h2>
+<h2 class="section-title">
+APPLY FOR VEXORA-ESP
+</h2>
 
 <form action="https://formsubmit.co/vexora.esp@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New VEXORA-ESP Application">
 
 <input type="text" name="Name" placeholder="NAME" required>
 
 <input type="number" name="Age" placeholder="AGE" required>
 
-<input type="text" name="IGN" placeholder="IN GAME NAME" required>
+<input type="text" name="In Game Name" placeholder="IN GAME NAME" required>
 
-<input type="text" name="UID" placeholder="GAME UID" required>
+<input type="text" name="Game UID" placeholder="GAME UID" required>
 
-<textarea name="About" rows="6" placeholder="ABOUT YOU..." required></textarea>
+<textarea name="About You" rows="6" placeholder="ABOUT YOU..." required></textarea>
 
 <button type="submit">
 SUBMIT APPLICATION
@@ -286,13 +328,17 @@ SUBMIT APPLICATION
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 <p>📧 vexora.esp@gmail.com</p>
 
+<p>WhatsApp • Instagram • Facebook</p>
+
 <br>
 
-© 2025 VEXORA-ESP • Official Free Fire Esports Team
+© 2025 VEXORA-ESP | Official Free Fire Esports Team
 
 </footer>
 
